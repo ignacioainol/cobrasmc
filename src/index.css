@@ -1,13 +1,103 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  color: azure;
+  font-family: 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #060606;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2em;
+}
+
+span.flag img {
+  width: 1.8em;
+  margin: 0 1em;
+}
+
+#custom-switch {
+  height: 1.3em;
+  width: 3em;
+}
+
+.itemsNavbar {
+  padding: 1em;
+  max-width: 55%;
+  /* justify-content: flex-end !important; */
+  flex-direction: row;
+  display: flex;
+  background: #00350E;
+  border: .4em solid white;
+  justify-content: space-between;
+  -webkit-transform: skew(-18deg);
+}
+
+.itemsNavbar a {
+  font-size: 1.2em;
+  font-family: 'Roboto';
+  color: azure;
+  transition: all .1s linear;
+}
+
+.itemsNavbar a:hover,
+.itemsNavbar a:active,
+.itemsNavbar a:focus {
+    color: azure;
+    text-decoration: none;
+}
+.itemsNavbar a:hover {
+  color: azure;
+  transform: scale(1.13);
+}
+
+@media (max-width: 1200px) {
+  .itemsNavbar {
+    transform: none; /* Eliminar cualquier skew */
+    margin-top: 10px; 
+    text-align: center;
+    /*flex-direction: column; /* Cambiar a disposición vertical */
+    max-width: 100%; /* Hacer que ocupe todo el ancho */
+  }
+
+  .itemsNavbar a {
+    font-size: 1em; /* Reducir tamaño del texto para dispositivos móviles */
+  }
+}
+
+
+@media (max-width: 767px) {
+  .itemsNavbar {
+    transform: none; /* Eliminar cualquier skew */
+    margin-top: 10px; 
+    text-align: center;
+    flex-direction: column; /* Cambiar a disposición vertical */
+    max-width: 100%; /* Hacer que ocupe todo el ancho */
+  }
+
+  .itemsNavbar a {
+    font-size: 1em; /* Reducir tamaño del texto para dispositivos móviles */
+    border-bottom: 2px solid white;
+  }
+
+  .itemsNavbar a:last-child {
+    font-size: 1em; /* Reducir tamaño del texto para dispositivos móviles */
+    border-bottom: none;
+  }
+}
+
+
+footer {
+  border-top: 1px solid #eee;
+  padding-top: 2em;
+  margin-top: 2em;
+  color: azure;
 }

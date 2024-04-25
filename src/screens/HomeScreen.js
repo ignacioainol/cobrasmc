@@ -13,7 +13,7 @@ export const HomeScreen = () => {
                   />
                 <Carousel.Caption>
                 <h3>deploy test</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <p>COBRAS MC.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>

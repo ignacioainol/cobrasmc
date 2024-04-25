@@ -12,8 +12,8 @@ export const HomeScreen = () => {
                     alt="First slide" 
                   />
                 <Carousel.Caption>
-                <h3>deploy test</h3>
-                <p>COBRAS MC.</p>
+                <h3>deploy CObras Site</h3>
+                <p>COBRAS M.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>

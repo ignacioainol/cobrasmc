@@ -22,8 +22,8 @@ export const HomeScreen = () => {
                     alt="First slide" 
                   />
                 <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h3>Club House</h3>
+                <p>Let's Rock </p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -32,13 +32,23 @@ export const HomeScreen = () => {
                     alt="First slide" 
                   />
                 <Carousel.Caption>
-                <h3>Third slide label</h3>
+                <h3>Rebel Rebel</h3>
                 <p>
-                    Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                    Heavy Metal is the Law
                 </p>
                 </Carousel.Caption>
             </Carousel.Item>
-            </Carousel>
+      </Carousel>
+      
+
+      <div className="container mt-5">
+        <div className="row mt-5">
+          <h4>Historia</h4>
+          <p>Hace quince años, en la ciudad de Concepción, un grupo de apasionados por las motocicletas se unió para formar un motoclub que honraría la herencia de la cultura de las dos ruedas. Así nació "Cobras MC", un nombre que resonaría en las carreteras y más allá, como símbolo de camaradería, respeto y pasión por la conducción.</p>
+          <p>Desde sus comienzos, los miembros de Cobras MC se comprometieron a establecer un estándar excepcional en el mundo de los motoclubs. Respetando rigurosamente todas las reglas de seguridad y ética, el club se convirtió en un faro de integridad y responsabilidad en la comunidad motorizada de la región.</p>
+          <p>A lo largo de los años, Cobras MC ha forjado lazos indestructibles entre sus miembros, cimentados en el amor compartido por la libertad en dos ruedas. Juntos, han explorado intrépidamente las carreteras sinuosas de Chile, descubriendo nuevos horizontes y creando recuerdos inolvidables en cada curva.</p>
+        </div>
+      </div>
       </>
   )
 }

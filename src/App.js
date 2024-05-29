@@ -6,6 +6,8 @@ import { MembersScreen } from './screens/MembersScreen';
 import { useEffect, useState } from 'react';
 import { Loading } from './components/Loading';
 import { Footer } from './components/Footer';
+import { ContactScreen } from './screens/ContactScreen';
+import { GalleryScreen } from './screens/GalleryScreen';
 // import { ChangeLanguaje } from './components/ChangeLanguaje';
 
 function App() {
@@ -64,6 +66,8 @@ function App() {
             <Routes>
               <Route>
                 <Route path="/members" element={<MembersScreen />}></Route>
+                <Route path="/contacto" element={<ContactScreen />}></Route>
+                <Route path="/gallery" element={<GalleryScreen />}></Route>
                 <Route path="/" element={<HomeScreen />}></Route>
               </Route>
             </Routes>

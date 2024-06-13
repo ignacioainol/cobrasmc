@@ -1,6 +1,4 @@
 import React, { Fragment } from 'react';
-import { Carousel } from 'react-bootstrap';
-import { CarouselImage } from '../components/CarouselImage';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 

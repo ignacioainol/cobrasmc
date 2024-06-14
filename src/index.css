@@ -1,9 +1,8 @@
 body {
   margin: 0;
   color: azure;
-  font-family: 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #060606;
@@ -29,15 +28,20 @@ span.flag img {
   width: 3em;
 }
 
+.basic-navbar-nav {
+  background-color: red !important;
+}
+
 .itemsNavbar {
   padding: 1em;
   max-width: 55%;
   /* justify-content: flex-end !important; */
   flex-direction: row;
   display: flex;
-  background: #00350E;
-  border: .4em solid white;
+  background: #00350e;
+  border: 0.4em solid white;
   justify-content: space-between;
+  transform: skew(-18deg);
   -webkit-transform: skew(-18deg);
 }
 
@@ -45,14 +49,14 @@ span.flag img {
   font-size: 1.2em;
   font-family: 'Roboto';
   color: azure;
-  transition: all .1s linear;
+  transition: all 0.1s linear;
 }
 
 .itemsNavbar a:hover,
 .itemsNavbar a:active,
 .itemsNavbar a:focus {
-    color: azure;
-    text-decoration: none;
+  color: azure;
+  text-decoration: none;
 }
 .itemsNavbar a:hover {
   color: azure;
@@ -62,7 +66,7 @@ span.flag img {
 @media (max-width: 1200px) {
   .itemsNavbar {
     transform: none; /* Eliminar cualquier skew */
-    margin-top: 10px; 
+    margin-top: 10px;
     text-align: center;
     /*flex-direction: column; /* Cambiar a disposición vertical */
     max-width: 100%; /* Hacer que ocupe todo el ancho */
@@ -73,11 +77,10 @@ span.flag img {
   }
 }
 
-
 @media (max-width: 767px) {
   .itemsNavbar {
     transform: none; /* Eliminar cualquier skew */
-    margin-top: 10px; 
+    margin-top: 10px;
     text-align: center;
     flex-direction: column; /* Cambiar a disposición vertical */
     max-width: 100%; /* Hacer que ocupe todo el ancho */
@@ -94,10 +97,40 @@ span.flag img {
   }
 }
 
-
+/* Footer section */
 footer {
   border-top: 1px solid #eee;
   padding-top: 2em;
   margin-top: 2em;
   color: azure;
+}
+
+.rrss-footer {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  margin-left: 0;
+}
+
+.rrss-footer li {
+  margin-right: 1em;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.rrss-footer li i.fa-facebook {
+  /* background-color: white; */
+  /* border-radius: 50%; */
+  color: #4267b2;
+}
+
+.rrss-footer li i.fa-instagram {
+  color: #b81d99;
+}
+
+@media (max-width: 800px) {
+  .navbar-toggler {
+    background-color: #ffffff; /* Cambia este valor al color deseado */
+  }
 }

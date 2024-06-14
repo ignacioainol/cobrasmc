@@ -24,7 +24,7 @@ export const HomeScreen = () => {
 
   return (
     <Fragment>
-      <ImageGallery items={images} />
+      <ImageGallery autoPlay={true} items={images} slideInterval={6000} />
     </Fragment>
   );
 };

@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 export const Footer = () => {
   return (
-    <footer className="text-white" style={{ backgroundColor: '#000000' }}>
+    <footer className="text-white">
       <Container>
         <Row>
           <Col md={4}>
@@ -19,12 +19,24 @@ export const Footer = () => {
           </Col>
           <Col md={4}>
             <h5>Síguenos en redes sociales</h5>
-            <ul>
+            <ul className="rrss-footer">
               <li>
-                <i className="fa-brands fa-facebook"></i>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100074688323318"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i className="fa-brands fa-facebook"></i>
+                </a>
               </li>
               <li>
-                <i class="fa-brands fa-instagram"></i>
+                <a
+                  rel="noreferrer"
+                  href="https://www.instagram.com/cobras_concepcion_mc/"
+                  target="_blank"
+                >
+                  <i className="fa-brands fa-instagram"></i>
+                </a>
               </li>
             </ul>
           </Col>

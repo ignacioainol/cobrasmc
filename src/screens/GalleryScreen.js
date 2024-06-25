@@ -3,6 +3,7 @@ import { Gallery } from 'react-grid-gallery';
 import Lightbox from 'react-18-image-lightbox';
 import 'react-18-image-lightbox/style.css';
 import { images } from './images';
+import './gallery.css';
 
 export const GalleryScreen = () => {
   const [index, setIndex] = useState(-1);
@@ -19,14 +20,14 @@ export const GalleryScreen = () => {
   const handleMoveNext = () => setIndex(nextIndex);
 
   return (
-    <div>
+    <div id="gallery">
       <Gallery
         images={images}
         onClick={handleClick}
         enableImageSelection={false}
+        margin={5}
       />
       {!!currentImage && (
-        /* @ts-ignore */
         <Lightbox
           mainSrc={currentImage.original}
           imageTitle={currentImage.caption}

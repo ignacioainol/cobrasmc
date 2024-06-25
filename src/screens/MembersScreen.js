@@ -52,7 +52,6 @@ export const MembersScreen = () => {
 
         <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
           <Card style={{ width: '18rem', margin: '0 auto' }}>
-            <Card.Img src="/assets/images/integrants/coqueto.jpeg" />
             <LazyLoadImage
               effect="blur"
               src="/assets/images/integrants/coqueto.jpeg"

@@ -129,6 +129,10 @@ footer {
   color: #b81d99;
 }
 
+.rrss-footer li i.fa-youtube {
+  color: #fa1b1b;
+}
+
 @media (max-width: 800px) {
   .navbar-toggler {
     background-color: #ffffff; /* Cambia este valor al color deseado */

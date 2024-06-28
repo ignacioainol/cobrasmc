@@ -38,6 +38,15 @@ export const Footer = () => {
                   <i className="fa-brands fa-instagram"></i>
                 </a>
               </li>
+              <li>
+                <a
+                  rel="noreferrer"
+                  href="https://www.youtube.com/channel/UCO78kmxi_aOI0VRmkS6_hmA"
+                  target="_blank"
+                >
+                  <i className="fa-brands fa-youtube"></i>
+                </a>
+              </li>
             </ul>
           </Col>
         </Row>

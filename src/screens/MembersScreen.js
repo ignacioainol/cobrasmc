@@ -207,7 +207,7 @@ export const MembersScreen = () => {
               className="card-img-top"
             />
             <Card.Body>
-              <Card.Title>Franco Gonzalez</Card.Title>
+              <Card.Title>Francisco Gonzalez</Card.Title>
             </Card.Body>
           </Card>
         </div>

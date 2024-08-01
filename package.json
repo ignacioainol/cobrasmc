@@ -17,6 +17,7 @@
     "react-lazy-load-image-component": "^1.6.0",
     "react-router-dom": "^6.23.0",
     "react-scripts": "5.0.1",
+    "react-typed": "^2.0.12",
     "web-vitals": "^2.1.4",
     "yet-another-react-lightbox": "^3.20.0"
   },

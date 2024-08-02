@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container, NavItem } from 'react-bootstrap';
 
 const Navigation = () => {
   const location = useLocation();
+  const [expanded, setExpanded] = useState(false);
+
+  const toggleNavbar = () => setExpanded(!expanded);
 
   return (
-    <Navbar expand="lg">
+    <Navbar expand="lg" expanded={expanded}>
       <Container className="mt-3">
         <Link to="/">
           <Navbar.Brand>
@@ -19,50 +22,63 @@ const Navigation = () => {
           </Navbar.Brand>
         </Link>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle
+          onClick={toggleNavbar}
+          aria-controls="basic-navbar-nav"
+        />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto w-100 justify-content-end">
             <div className="itemsNavbar">
-              <Link
-                className={`nav-link ${
-                  location.pathname === '/' ? 'active' : ''
-                }`}
-                to="/"
-              >
-                INICIO
-              </Link>
-              <Link
-                className={`nav-link ${
-                  location.pathname === '/history' ? 'active' : ''
-                }`}
-                to="/history"
-              >
-                HISTORIA
-              </Link>
-              <Link
-                className={`nav-link ${
-                  location.pathname === '/members' ? 'active' : ''
-                }`}
-                to="/members"
-              >
-                INTEGRANTES
-              </Link>
-              <Link
-                className={`nav-link ${
-                  location.pathname === '/gallery' ? 'active' : ''
-                }`}
-                to="/gallery"
-              >
-                GALERÍA
-              </Link>
-              <Link
-                className={`nav-link ${
-                  location.pathname === '/contacto' ? 'active' : ''
-                }`}
-                to="/contacto"
-              >
-                CONTACTO
-              </Link>
+              <NavItem>
+                <Nav.Link
+                  as={Link}
+                  to="/"
+                  className={location.pathname === '/' ? 'active' : ''}
+                  onClick={() => setExpanded(false)}
+                >
+                  INICIO
+                </Nav.Link>
+              </NavItem>
+              <NavItem>
+                <Nav.Link
+                  as={Link}
+                  to="/history"
+                  className={location.pathname === '/history' ? 'active' : ''}
+                  onClick={() => setExpanded(false)}
+                >
+                  HISTORIA
+                </Nav.Link>
+              </NavItem>
+              <NavItem>
+                <Nav.Link
+                  as={Link}
+                  to="/members"
+                  className={location.pathname === '/members' ? 'active' : ''}
+                  onClick={() => setExpanded(false)}
+                >
+                  INTEGRANTES
+                </Nav.Link>
+              </NavItem>
+              <NavItem>
+                <Nav.Link
+                  as={Link}
+                  to="/gallery"
+                  className={location.pathname === '/gallery' ? 'active' : ''}
+                  onClick={() => setExpanded(false)}
+                >
+                  GALERÍA
+                </Nav.Link>
+              </NavItem>
+              <NavItem>
+                <Nav.Link
+                  as={Link}
+                  to="/contacto"
+                  className={location.pathname === '/contacto' ? 'active' : ''}
+                  onClick={() => setExpanded(false)}
+                >
+                  CONTACTO
+                </Nav.Link>
+              </NavItem>
             </div>
           </Nav>
           <div className="container-rrss-header">

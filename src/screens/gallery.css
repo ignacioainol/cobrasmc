@@ -1,0 +1,4 @@
+#gallery #ReactGridGallery div {
+  justify-content: center;
+  row-gap: 10px;
+}

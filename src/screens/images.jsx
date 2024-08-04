@@ -5,7 +5,6 @@ for (let i = 1; i <= 30; i++) {
   imagesArr.push({
     src: `./assets/images/gallery/${imageName}`,
     original: `./assets/images/gallery/${imageName}`,
-    width: 300,
     height: 200,
   });
 }

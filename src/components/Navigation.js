@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Navbar, Nav, Container, NavItem } from 'react-bootstrap';
+import { ReactTyped } from 'react-typed';
 
 const Navigation = () => {
   const location = useLocation();
@@ -21,6 +22,14 @@ const Navigation = () => {
             />
           </Navbar.Brand>
         </Link>
+
+        <div className="containerToDeath">
+          <ReactTyped
+            className="toDeath"
+            strings={['33 To Death!']}
+            typeSpeed={40}
+          />
+        </div>
 
         <Navbar.Toggle
           onClick={toggleNavbar}
@@ -79,30 +88,30 @@ const Navigation = () => {
                   CONTACTO
                 </Nav.Link>
               </NavItem>
+              <NavItem className="container-rrss-header">
+                <ul className="rrss-header">
+                  <li>
+                    <a
+                      href="https://www.facebook.com/profile.php?id=100074688323318"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <i className="fa-brands fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      rel="noreferrer"
+                      href="https://www.instagram.com/cobras_concepcion_mc/"
+                      target="_blank"
+                    >
+                      <i className="fa-brands fa-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
+              </NavItem>
             </div>
           </Nav>
-          <div className="container-rrss-header">
-            <ul className="rrss-header">
-              <li>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100074688323318"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <i className="fa-brands fa-facebook"></i>
-                </a>
-              </li>
-              <li>
-                <a
-                  rel="noreferrer"
-                  href="https://www.instagram.com/cobras_concepcion_mc/"
-                  target="_blank"
-                >
-                  <i className="fa-brands fa-instagram"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

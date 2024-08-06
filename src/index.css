@@ -177,3 +177,9 @@ footer {
     background-color: #ffffff;
   }
 }
+
+@media (max-width: 522px) {
+  .toDeath {
+    font-size: 1.2em !important;
+  }
+}

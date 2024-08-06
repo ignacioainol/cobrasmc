@@ -179,7 +179,10 @@ footer {
 }
 
 @media (max-width: 522px) {
+  .containerToDeath {
+    top: 35px !important;
+  }
   .toDeath {
-    font-size: 1em !important;
+    font-size: 1.2em !important;
   }
 }

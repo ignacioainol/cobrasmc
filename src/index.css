@@ -9,6 +9,37 @@ body {
   background-color: #060606;
 }
 
+a {
+  text-decoration: none;
+}
+
+.main-wrapper {
+  position: relative;
+}
+
+.gallery-wrapper {
+  position: relative;
+  /* background-color: red; */
+  height: 975px;
+}
+
+.posts-wrapper {
+  margin-top: 5em;
+  position: relative;
+}
+
+.posts-wrapper h3 {
+  font-family: 'Rock Salt', cursive;
+  font-weight: bold;
+}
+
+.posts-wrapper h5 {
+  font-family: 'Rock Salt', cursive;
+  font-weight: bold;
+  color: azure;
+  margin-top: 1em;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -82,6 +113,21 @@ span.flag img {
 
 .container-rrss-header a:hover {
   color: azure;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .containerToDeath {
+    display: none;
+  }
+}
+
+@media (max-width: 1700px) {
+  .gallery-wrapper {
+    height: 785px;
+  }
+  .posts-wrapper {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 1200px) {

@@ -13154,6 +13154,11 @@ react-scripts@5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
+react-simple-loading@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.npmjs.org/react-simple-loading/-/react-simple-loading-0.0.3.tgz"
+  integrity sha512-Pv0O7twME8yyVF2y5W9Q5YWKuC95BFiX6J57659EDL52phyG/fEXWSPG524xJb6y+pf5hpyZVQn70NcE7rj8MA==
+
 react-transition-group@^4.4.5:
   version "4.4.5"
   resolved "https://registry.npmjs.org/react-transition-group/-/react-transition-group-4.4.5.tgz"

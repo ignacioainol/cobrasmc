@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Loading.css';
 
-export const Loading = () => {
+export const Splash = () => {
   const [applyEffect, setApplyEffect] = useState(false);
 
   useEffect(() => {

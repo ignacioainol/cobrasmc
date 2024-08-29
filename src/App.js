@@ -4,11 +4,12 @@ import { Container } from 'react-bootstrap';
 import { HomeScreen } from './screens/HomeScreen';
 import { MembersScreen } from './screens/MembersScreen';
 import { useEffect, useState } from 'react';
-import { Loading } from './components/Loading';
+import { Splash } from './components/Splash';
 import { Footer } from './components/Footer';
 import { ContactScreen } from './screens/ContactScreen';
 import { GalleryScreen } from './screens/GalleryScreen';
 import Navigation from './components/Navigation';
+import { PostScreen } from './screens/PostScreen';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -16,7 +17,7 @@ function App() {
     setTimeout(() => setLoading(false), 1400);
   }, []);
   if (loading) {
-    return <Loading />;
+    return <Splash />;
   }
   return (
     <BrowserRouter>
@@ -32,6 +33,7 @@ function App() {
                   <Route path="/members" element={<MembersScreen />}></Route>
                   <Route path="/contacto" element={<ContactScreen />}></Route>
                   <Route path="/gallery" element={<GalleryScreen />}></Route>
+                  <Route path="/post/:slug" element={<PostScreen />} />
                   <Route path="/" element={<HomeScreen />}></Route>
                 </Route>
               </Routes>

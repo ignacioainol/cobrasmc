@@ -1,19 +1,32 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
+import Card from 'react-bootstrap/Card';
+import { Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import Loading from 'react-simple-loading';
 
 export const HomeScreen = () => {
   const [posts, setPosts] = useState([]);
+  const [loadingPosts, setLoadingPosts] = useState(true);
+  const [error, setError] = useState(null);
   useEffect(() => {
     const loadPosts = async () => {
-      const response = await fetch('http://localhost:8000/wp-json/wp/v2/posts');
-      if (!response.ok) {
-        // oups! something went wrong
-        return;
+      try {
+        const response = await fetch(
+          'http://localhost:8000/wp-json/wp/v2/posts?_embed'
+        );
+        if (!response.ok) {
+          // oups! something went wrong
+          return;
+        }
+        const posts = await response.json();
+        setPosts(posts);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoadingPosts(false);
       }
-
-      const posts = await response.json();
-      setPosts(posts);
     };
 
     loadPosts();
@@ -37,12 +50,50 @@ export const HomeScreen = () => {
     },
   ];
 
+  const getFeaturedImage = (post) => {
+    // Verifica si el post tiene media asociada y accede a la URL de la imagen
+    if (
+      post['_embedded'] &&
+      post['_embedded']['wp:featuredmedia'] &&
+      post['_embedded']['wp:featuredmedia'][0]
+    ) {
+      return post['_embedded']['wp:featuredmedia'][0].source_url;
+    }
+    // Devuelve una imagen por defecto si no hay imagen destacada
+    return 'https://via.placeholder.com/200';
+  };
+
+  //if (loadingPosts) return <Loading color={'firebrick'} />;
+
   return (
     <Fragment>
-      <ImageGallery autoPlay={true} items={images} slideInterval={6000} />
-      {posts.map((post, index) => (
-        <p>{post.title.rendered}</p>
-      ))}
+      <Container className="main-wrapper">
+        <Row className="gallery-wrapper">
+          <ImageGallery autoPlay={true} items={images} slideInterval={6000} />
+        </Row>
+
+        <Row className="posts-wrapper">
+          <h3 className="mb-4">Last News</h3>
+          {loadingPosts && <Loading color={'firebrick'} />}
+          {posts.map((post, index) => (
+            <Col xl={3} md={6} sm={12} key={index} className="mb-4">
+              <Link to={`/post/${post.slug}`}>
+                <div
+                  className="post"
+                  style={{
+                    backgroundImage: `url(${getFeaturedImage(post)})`,
+                    backgroundSize: 'cover',
+                    width: '100%',
+                    backgroundPosition: 'center',
+                    height: '200px',
+                  }}
+                ></div>
+                <h5 className="text-center">{post.title.rendered}</h5>
+              </Link>
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </Fragment>
   );
 };

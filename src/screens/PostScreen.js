@@ -39,9 +39,16 @@ export const PostScreen = () => {
     <div>
       {post && (
         <>
-          <div>
-            <img src={post.fimg_url} alt="" />
-          </div>
+          <div
+            style={{
+              marginBottom: '2em',
+              backgroundImage: `url(${post.fimg_url})`,
+              backgroundSize: 'cover',
+              width: '100%',
+              backgroundPosition: 'center',
+              height: '65vh',
+            }}
+          ></div>
           <h1>{post.title.rendered}</h1>
           <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
         </>

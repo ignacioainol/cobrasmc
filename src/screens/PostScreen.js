@@ -32,6 +32,11 @@ export const PostScreen = () => {
     fetchPost();
   }, [slug]);
 
+  const authorName =
+    post && post._embedded && post._embedded.author
+      ? post._embedded.author[0].name
+      : 'Unknown author';
+
   if (loading) return <Loading color={'firebrick'} />;
   if (error) return <p>Error: {error}</p>;
 
@@ -39,6 +44,10 @@ export const PostScreen = () => {
     <div>
       {post && (
         <>
+          <p>
+            <strong>Por</strong> {authorName}
+          </p>
+          <p>Miercoles 04 septiembre de 2024 | 18:02</p>
           <div
             style={{
               marginBottom: '2em',

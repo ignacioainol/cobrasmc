@@ -112,19 +112,6 @@ export const MembersScreen = () => {
           <Card style={{ width: '18rem', margin: '0 auto' }}>
             <LazyLoadImage
               effect="blur"
-              src="/assets/images/integrants/voglio.jpeg"
-              className="card-img-top"
-            />
-            <Card.Body>
-              <Card.Title>Humberto Voglio</Card.Title>
-            </Card.Body>
-          </Card>
-        </div>
-
-        <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
-          <Card style={{ width: '18rem', margin: '0 auto' }}>
-            <LazyLoadImage
-              effect="blur"
               src="/assets/images/integrants/carlos.jpeg"
               className="card-img-top"
             />
@@ -169,19 +156,6 @@ export const MembersScreen = () => {
             />
             <Card.Body>
               <Card.Title>Jp</Card.Title>
-            </Card.Body>
-          </Card>
-        </div>
-
-        <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
-          <Card style={{ width: '18rem', margin: '0 auto' }}>
-            <LazyLoadImage
-              effect="blur"
-              src="/assets/images/integrants/lepe.jpeg"
-              className="card-img-top"
-            />
-            <Card.Body>
-              <Card.Title>Fabian Lepe</Card.Title>
             </Card.Body>
           </Card>
         </div>

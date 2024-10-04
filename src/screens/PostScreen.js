@@ -56,13 +56,14 @@ export const PostScreen = () => {
           </p>
           <p>Miercoles 04 septiembre de 2024 | 18:02</p>
           <div
+            className="bgImage"
             style={{
               marginBottom: '2em',
               backgroundImage: `url(${featuredImage})`,
               backgroundSize: 'cover',
               width: '100%',
               backgroundPosition: 'center',
-              height: '65vh',
+              height: '55vh',
             }}
           ></div>
           <h1>{post.title.rendered}</h1>

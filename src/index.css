@@ -123,10 +123,10 @@ span.flag img {
 
 @media (max-width: 1700px) {
   .gallery-wrapper {
-    height: 785px;
+    height: 50vh;
   }
   .posts-wrapper {
-    margin-top: 0;
+    margin-top: 3em;
   }
 }
 
@@ -166,6 +166,9 @@ span.flag img {
 
   .itemsNavbar .nav-item:nth-last-child(2) {
     border-bottom: none;
+  }
+  .bgImage {
+    height: 40vh !important;
   }
 }
 

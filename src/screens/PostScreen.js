@@ -8,11 +8,14 @@ export const PostScreen = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const apiUrl = process.env.REACT_APP_API_URL;
+  console.log(`API URL: ${apiUrl}?slug=${slug}&_embed`);
+
   useEffect(() => {
     const fetchPost = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8000/wp-json/wp/v2/posts?slug=${slug}&_embed`
+          `${process.env.REACT_APP_API_URL}?slug=${slug}&_embed`
         );
         if (!response.ok) {
           throw new Error('Error fetching post');
@@ -37,6 +40,10 @@ export const PostScreen = () => {
       ? post._embedded.author[0].name
       : 'Unknown author';
 
+  const featuredImage = post?._embedded['wp:featuredmedia']
+    ? post?._embedded['wp:featuredmedia'][0]?.source_url
+    : 'default-image-url';
+
   if (loading) return <Loading color={'firebrick'} />;
   if (error) return <p>Error: {error}</p>;
 
@@ -51,7 +58,7 @@ export const PostScreen = () => {
           <div
             style={{
               marginBottom: '2em',
-              backgroundImage: `url(${post.fimg_url})`,
+              backgroundImage: `url(${featuredImage})`,
               backgroundSize: 'cover',
               width: '100%',
               backgroundPosition: 'center',

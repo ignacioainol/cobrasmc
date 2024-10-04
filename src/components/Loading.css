@@ -15,17 +15,22 @@
 }
 
 .fade-out {
-  animation: fade 1.4s ease;
+  animation: fade 1.7s ease;
 }
 
 @keyframes fade {
   0% {
-    transform: scale(0.3);
+    transform: scale(0.5);
+    filter: blur(0);
+  }
+
+  50% {
+    transform: scale(0.5);
     filter: blur(0);
   }
 
   100% {
-    transform: scale(1);
+    transform: scale(2);
     filter: blur(10px);
   }
 }

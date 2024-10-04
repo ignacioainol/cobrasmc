@@ -7,15 +7,15 @@ import { Link } from 'react-router-dom';
 import Loading from 'react-simple-loading';
 
 export const HomeScreen = () => {
+  const apiUrl = process.env.REACT_APP_API_URL;
+  console.log(`API URL: ${apiUrl}`);
   const [posts, setPosts] = useState([]);
   const [loadingPosts, setLoadingPosts] = useState(true);
   const [error, setError] = useState(null);
   useEffect(() => {
     const loadPosts = async () => {
       try {
-        const response = await fetch(
-          'http://localhost:8000/wp-json/wp/v2/posts?_embed'
-        );
+        const response = await fetch(`${process.env.REACT_APP_API_URL}?_embed`);
         if (!response.ok) {
           // oups! something went wrong
           return;

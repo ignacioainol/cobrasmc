@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Loading from 'react-simple-loading';
+import { Helmet } from 'react-helmet-async';
 
 export const HomeScreen = () => {
   const apiUrl = process.env.REACT_APP_API_URL;
@@ -68,6 +69,19 @@ export const HomeScreen = () => {
   return (
     <Fragment>
       <Container className="main-wrapper">
+        <Helmet>
+          <title>Cobras MC | Home</title>
+          <meta property="og:title" content="The Rock" />
+          <meta property="og:type" content="video.movie" />
+          <meta
+            property="og:url"
+            content="https://www.imdb.com/title/tt0117500/"
+          />
+          <meta
+            property="og:image"
+            content="https://ia.media-imdb.com/images/rock.jpg"
+          />
+        </Helmet>
         <Row className="gallery-wrapper">
           <ImageGallery autoPlay={true} items={images} slideInterval={6000} />
         </Row>

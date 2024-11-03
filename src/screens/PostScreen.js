@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Loading from 'react-simple-loading';
+import { Helmet } from 'react-helmet-async';
 
 export const PostScreen = () => {
   const { slug } = useParams();
@@ -51,6 +52,20 @@ export const PostScreen = () => {
     <div>
       {post && (
         <>
+          <Helmet>
+            <title>{post.title.rendered}</title>
+            <meta property="og:title" content={post.title.rendered} />
+            <meta
+              property="og:description"
+              content={post.excerpt.rendered.replace(/<[^>]+>/g, '')}
+            />
+            <meta property="og:image" content={featuredImage} />
+            <meta
+              property="og:url"
+              content={`https://yourwebsite.com/post/${slug}`}
+            />
+            <meta property="og:type" content="article" />
+          </Helmet>
           <p>
             <strong>Por</strong> {authorName}
           </p>
